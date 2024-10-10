@@ -28,21 +28,11 @@ tags:
 - ### interface description
 	 > int g0/1
 	  > description Connect to R1 interface G0/0
-- ### SSH
- > username *username* password *password*
- > ip domain-name *domain name*
- > crypto key generate rsa
- > bits: 1024
- > ip ssh version 2
- > line vty 0 15
- > login local
- > transport input ssh
+ - ### SSH
+ > username *username* password *password* <br /> ip domain-name *domain name* <br /> crypto key generate rsa
+ > bits: 1024 <br /> ip ssh version 2 <br />  line vty 0 15 <br />  login local <br />  transport input ssh
  - #### ACL
-  > ip access-list standard SSHList
-  > permit host 11.1.1.1
-  > exit
-  > line vty 0 15
-  > access-class SSHList in
+  > ip access-list standard SSHList <br />  permit host 11.1.1.1 <br />  exit <br />  line vty 0 15 <br />  access-class SSHList in
 ## RADIUS Authentication
 [[RADIUS and LDAP Authentication]]]
 ## Access Control List
